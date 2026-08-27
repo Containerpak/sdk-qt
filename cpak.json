@@ -1,11 +1,18 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v2.json",
-  "manifest_version": "2.0",
+  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v3.json",
+  "manifest_version": "3.0",
   "name": "Qt SDK",
   "description": "Qt 6 build tools with Core, Widgets and WebEngine development files.",
   "version": "6.10.2",
-  "image": "ghcr.io/containerpak/sdk-qt:main",
-  "binaries": ["/usr/bin/qmake6", "/usr/bin/qtpaths6", "/usr/bin/qtdiag6", "/usr/bin/qtplugininfo6", "/usr/bin/qdbusviewer6", "/usr/bin/pixeltool6"],
+  "image": "ghcr.io/containerpak/sdk-qt@sha256:188bb1d34a4e89adaabf29ac7c74b510ab6ae4c3c8377b8845c813c3a0d274b9",
+  "binaries": [
+    "/usr/bin/qmake6",
+    "/usr/bin/qtpaths6",
+    "/usr/bin/qtdiag6",
+    "/usr/bin/qtplugininfo6",
+    "/usr/bin/qdbusviewer6",
+    "/usr/bin/pixeltool6"
+  ],
   "desktop_entries": [],
   "dependencies": [],
   "addons": [],
@@ -14,21 +21,18 @@
     "slot": "sdk.qt",
     "mode": "exclusive",
     "exports": {
-      "path": ["/usr/lib/qt6/bin"]
+      "path": [
+        "/usr/lib/qt6/bin"
+      ]
     }
   },
   "idle_time": 0,
   "override": {
-    "socketX11": false,
     "socketWayland": false,
     "socketPulseAudio": false,
-    "socketSessionBus": false,
-    "socketSystemBus": false,
     "socketSshAgent": true,
     "socketCups": false,
     "socketGpgAgent": true,
-    "socketAtSpiBus": false,
-    "socketBluetooth": false,
     "deviceDri": false,
     "deviceKvm": false,
     "deviceShm": false,
@@ -40,7 +44,12 @@
     "deviceAll": false,
     "notification": false,
     "openURI": false,
-    "filesystem": [{"path": "home", "access": "read-write"}],
+    "filesystem": [
+      {
+        "path": "home",
+        "access": "read-write"
+      }
+    ],
     "env": [],
     "network": true,
     "process": false,
@@ -48,7 +57,6 @@
     "memoryMaxMB": 0,
     "cpuQuota": 0,
     "pidsMax": 0,
-    "asRoot": false,
-    "allowedHostCommands": []
+    "asRoot": false
   }
 }
