@@ -4,7 +4,7 @@
   "name": "Qt SDK",
   "description": "Qt 6 build tools with Core, Widgets and WebEngine development files.",
   "version": "6.10.2",
-  "image": "ghcr.io/containerpak/sdk-qt@sha256:fb7d03f2f01844e8ab62230cc1c01f6976b5e6115a35e3d8b434a809f6027a37",
+  "image": "ghcr.io/containerpak/sdk-qt@sha256:f6a8c52c10abee4977bfcb04a84b71b7dac7d4a1c0be049ecc0ce6289f2ba406",
   "binaries": [
     "/usr/bin/qmake6",
     "/usr/bin/qtpaths6",
